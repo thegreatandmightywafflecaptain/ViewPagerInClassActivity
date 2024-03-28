@@ -32,7 +32,9 @@ class TextFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_text, container, false)
+        val view =  inflater.inflate(R.layout.fragment_text, container, false)
+        view.findViewById<TextView>(R.id.textView)?.text = param1
+        return view
     }
 
     companion object {
